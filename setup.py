@@ -182,10 +182,7 @@ if __name__ == '__main__':
             'Development Status :: 4 - Beta',
             'License :: OSI Approved :: Apache Software License',
             'Operating System :: OS Independent',
-            'Programming Language :: Python :: 3.6',
-            'Programming Language :: Python :: 3.7',
-            'Programming Language :: Python :: 3.8',
-            'Programming Language :: Python :: 3.9',
+            'Programming Language :: Python :: 3.10',
         ],
         license='Apache License 2.0',
         install_requires=parse_requirements('requirements/runtime.txt'),
@@ -193,8 +190,12 @@ if __name__ == '__main__':
             'all': parse_requirements('requirements.txt'),
             'tests': parse_requirements('requirements/tests.txt'),
             'optional': parse_requirements('requirements/optional.txt'),
-            'mim': parse_requirements('requirements/mminstall.txt'),
-            'multimodal': parse_requirements('requirements/multimodal.txt'),
+        },
+        entry_points={
+            'console_scripts': [
+                'vocalign-train=tools.train:main',
+                'vocalign-test=tools.test:main',
+            ],
         },
         ext_modules=[],
         zip_safe=False)

@@ -7,7 +7,6 @@ einops==0.3.0
 imageio==2.9.0
 imageio-ffmpeg==0.4.2
 invisible-watermark
-kornia==0.6
 -e git+https://github.com/CompVis/stable-diffusion@21f890f#egg=latent-diffusion
 nibabel
 omegaconf==2.1.1
